@@ -14,7 +14,7 @@ const options = {
 
 const useMovies = () => {
     const page = useSelector((store) => store.page.page);
-    console.log(`API called for page:", ${page}`)
+    // console.log(`API called for page:", ${page}`)
  
     const dispatch = useDispatch();
 
@@ -22,7 +22,7 @@ const useMovies = () => {
     try {
       const data = await fetch(`https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=${page}`, options);
       const json = await data.json();
-      console.log("movies list", json.results);
+      // console.log("movies list", json.results);
       dispatch(addMovies(json.results));
       //dispatch(nextPage())
 

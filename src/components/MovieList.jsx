@@ -25,7 +25,6 @@ const MovieList = () => {
         document.body.offsetHeight-100
       ) {
 
-        console.log("hey");
         dispatch(nextPage());
       }
     };
@@ -35,7 +34,7 @@ const MovieList = () => {
     return () => {
       window.removeEventListener('scroll', handleOnScroll);
     };
-  },[movies, page, dispatch])
+  },[movies, data, page, dispatch])
 
   // if(movies == null) return <div>No Data</div>
 
